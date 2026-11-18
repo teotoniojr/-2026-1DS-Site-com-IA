@@ -1,1 +1,1 @@
-# -2026-1DS-Site-com-IA
+# 2026-1DS-blog

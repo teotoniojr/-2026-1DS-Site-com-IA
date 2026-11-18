@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciência em Foco | Blog de Divulgação Científica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="index.html" class="marca">
+            <img class="logo" src="img/logo.png" alt="Logotipo com representação de um átomo">
+            <div>
+                <h1>Ciência em Foco</h1>
+                <span>Explorando o universo da descoberta</span>
+            </div>
+        </a>
+
+        <nav aria-label="Navegação principal">
+            <ul class="menu">
+                <li><a href="index.html" class="ativo">Home</a></li>
+                <li><a href="#secao-noticias">Notícias</a></li>
+                <li><a href="#sobre">Sobre o Blog</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-hero">
+        <div class="banner-conteudo">
+            <span class="etiqueta">Divulgação Científica</span>
+            <h2>Entenda os fenômenos que transformam o nosso planeta</h2>
+            <p>Artigos diretos e acessíveis sobre clima, astronomia, biologia e tecnologia para estudantes e curiosos.</p>
+        </div>
+    </section>
+
+    <main id="secao-noticias" class="container">
+        <div class="barra-ferramentas">
+            <h2 class="titulo-noticias">As Novidades da Ciência</h2>
+
+            <div class="controles-filtro">
+                <input type="search" id="campo-busca" placeholder="Pesquisar notícia..." aria-label="Pesquisar notícia">
+                
+                <div class="filtros-categoria" role="group" aria-label="Filtrar por categoria">
+                    <button class="btn-filtro ativo" data-categoria="todas">Todas</button>
+                    <button class="btn-filtro" data-categoria="clima">Clima</button>
+                    <button class="btn-filtro" data-categoria="astronomia">Astronomia</button>
+                    <button class="btn-filtro" data-categoria="biologia">Biologia</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="noticias" id="lista-noticias">
+            <!-- Notícia 1: Link direto para noticia01.html -->
+            <article class="card" data-id="noticia-1" data-categoria="clima">
+                <div class="card-imagem-wrapper">
+                    <img src="img/capa.jpg" alt="Urso polar nadando em águas oceânicas">
+                    <span class="tag-categoria">Clima</span>
+                </div>
+                <div class="card-corpo">
+                    <time datetime="2026-11-10">10 de Novembro, 2026</time>
+                    <h3>O que é o Super El Niño e como ele afeta o Brasil?</h3>
+                    <p>Descubra como o aquecimento anormal das águas do Oceano Pacífico altera o regime de chuvas e temperaturas em todo o país.</p>
+                    
+                    <div class="card-rodape">
+                        <div class="botoes">
+                            <button type="button" class="botao-reacao" data-tipo="curtir" aria-label="Curtir notícia">
+                                👍 <span>12</span>
+                            </button>
+                            <button type="button" class="botao-reacao" data-tipo="amei" aria-label="Amar notícia">
+                                ❤️ <span>8</span>
+                            </button>
+                        </div>
+                        <a href="noticia01.html" class="link-leitura">Ler artigo →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Notícia 2: Abre leitura rápida no modal -->
+            <article class="card" data-id="noticia-2" data-categoria="astronomia">
+                <div class="card-imagem-wrapper">
+                    <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=80" 
+                         onerror="this.src='img/capa.jpg'" 
+                         alt="Nebulosa colorida no espaço profundo">
+                    <span class="tag-categoria">Astronomia</span>
+                </div>
+                <div class="card-corpo">
+                    <time datetime="2026-11-14">14 de Novembro, 2026</time>
+                    <h3>Telescópio James Webb detecta moléculas orgânicas em exoplaneta</h3>
+                    <p>Novas análises espectroscópicas revelam sinais de metano e dióxido de carbono na atmosfera de um planeta fora do Sistema Solar.</p>
+                    
+                    <div class="card-rodape">
+                        <div class="botoes">
+                            <button type="button" class="botao-reacao" data-tipo="curtir" aria-label="Curtir notícia">
+                                👍 <span>19</span>
+                            </button>
+                            <button type="button" class="botao-reacao" data-tipo="amei" aria-label="Amar notícia">
+                                ❤️ <span>15</span>
+                            </button>
+                        </div>
+                        <button type="button" class="link-leitura btn-modal" 
+                                data-titulo="Telescópio James Webb detecta moléculas orgânicas em exoplaneta"
+                                data-categoria="Astronomia"
+                                data-texto="Utilizando sensores infravermelhos de altíssima precisão, astrônomos conseguiram analisar a luz estelar filtrada pela atmosfera de um exoplaneta localizado a 120 anos-luz da Terra. Os dados apontam a presença de moléculas baseadas em carbono, como metano e dióxido de carbono. Embora isso não confirme a existência de vida, ajuda os cientistas a compreenderem como atmosferas planetárias se formam e evoluem.">
+                            Ler artigo →
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Notícia 3: Abre leitura rápida no modal -->
+            <article class="card" data-id="noticia-3" data-categoria="biologia">
+                <div class="card-imagem-wrapper">
+                    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80" 
+                         onerror="this.src='img/capa.jpg'" 
+                         alt="Pesquisa científica em laboratório de biologia">
+                    <span class="tag-categoria">Biologia</span>
+                </div>
+                <div class="card-corpo">
+                    <time datetime="2026-11-17">17 de Novembro, 2026</time>
+                    <h3>Como a técnica CRISPR está revolucionando a medicina genética</h3>
+                    <p>Entenda como a chamada "tesoura molecular" permite corrigir mutações no DNA responsáveis por doenças hereditárias raras.</p>
+                    
+                    <div class="card-rodape">
+                        <div class="botoes">
+                            <button type="button" class="botao-reacao" data-tipo="curtir" aria-label="Curtir notícia">
+                                👍 <span>24</span>
+                            </button>
+                            <button type="button" class="botao-reacao" data-tipo="amei" aria-label="Amar notícia">
+                                ❤️ <span>21</span>
+                            </button>
+                        </div>
+                        <button type="button" class="link-leitura btn-modal"
+                                data-titulo="Como a técnica CRISPR está revolucionando a medicina genética"
+                                data-categoria="Biologia"
+                                data-texto="A tecnologia CRISPR-Cas9 funciona como um sistema de edição de texto para o código genético. Inspirada em um mecanismo de defesa natural das bactérias contra vírus, essa ferramenta permite que cientistas localizem trechos específicos do DNA e substituam sequências defeituosas. Nos últimos anos, terapias baseadas em CRISPR começaram a ser aprovadas para tratar condições como a anemia falciforme.">
+                            Ler artigo →
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <p id="mensagem-vazia" class="mensagem-vazia" hidden>Nenhuma notícia encontrada para essa busca.</p>
+
+        <section id="sobre" class="secao-info">
+            <h3>Sobre o Projeto</h3>
+            <p>Este portal foi desenvolvido como projeto de Educação Digital no 1º ano do Ensino Médio, com o objetivo de aproximar a ciência do cotidiano por meio de uma leitura clara, interativa e acessível.</p>
+        </section>
+    </main>
+
+    <!-- Modal para leitura rápida das notícias secundárias -->
+    <dialog id="modal-noticia" class="modal">
+        <div class="modal-conteudo">
+            <button type="button" id="fechar-modal" class="btn-fechar" aria-label="Fechar leitura">✕</button>
+            <span id="modal-categoria" class="tag-categoria">Categoria</span>
+            <h2 id="modal-titulo">Título da Notícia</h2>
+            <p id="modal-texto">Texto completo da notícia.</p>
+        </div>
+    </dialog>
+
+    <footer id="contato">
+        <p>Feito por <strong>Teotonio Jr</strong> © <span id="ano-atual">2026</span> — Projeto de Educação Digital</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
